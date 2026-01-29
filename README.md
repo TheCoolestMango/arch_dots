@@ -12,7 +12,7 @@ My dot files and additional instructions for ricing arch on hyprland
 * Notification center: [swaync](https://github.com/ErikReider/SwayNotificationCenter)
 * Main font: [Departure Mono](https://departuremono.com/)
 * Animated desktop: [awww](https://codeberg.org/LGFae/awww)
-* Notetaker: [obsidian]()
+* Notetaker: [obsidian](https://obsidian.md/)
 
 ## Additional packages
 * GTK settings: [nwg-look](https://github.com/nwg-piotr/nwg-look)
