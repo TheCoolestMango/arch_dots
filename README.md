@@ -25,7 +25,6 @@ My dot files and additional instructions for ricing arch on hyprland
 │   └── window_rules.conf
 ├── hyprland.conf
 ├── hyprlock.conf
-├── hyprpaper.conf
 └── hyprtoolkit.conf
 
 ./.config/waybar # Waybar configuration files
@@ -46,7 +45,7 @@ My dot files and additional instructions for ricing arch on hyprland
 ## Additional packages
 * GTK settings: [```nwg-look```](https://github.com/nwg-piotr/nwg-look)
 * Color picker: hyprpicker
-* Screenshots: hyprshot (Hotkey configured as SUPER+P in /hypr/config/binds.conf)
+* Screenshots: hyprshot (Hotkey configured as SUPER+P in ```/hypr/config/binds.conf```)
 * AUR helper, some packages require it for easier installation: [yay](https://github.com/Jguer/yay)
 * GTK themes: catppuccin-gtk-theme-mocha ([AUR](https://aur.archlinux.org/packages/catppuccin-gtk-theme-mocha))
 * Cursor theme: [catppuccin-cursors-mocha](https://github.com/catppuccin/cursors)
@@ -91,7 +90,13 @@ autologin-session=hyprland
 groupadd -r autologin
 gpasswd -a <username> autologin
 ```
-4. Then ensure that the hyprland startup config includes your lockscreen (e.g. hyprlock):
+4. Then ensure that the hyprland startup config includes your lockscreen (e.g. hyprlock). In ```.config/hypr/config/startup.conf``` add:
 ```
 exec-once = hyprlock
+```
+### Obsidian
+>Instead of purchasing a vault, I sync vaults via GitHub.
+1. Configure auto-pull on Arch, hyprland. In ```.config/hypr/config/startup.conf``` add
+```
+exec-once = hyprctl dispatch exec "cd ~/Notes && git pull"
 ```
