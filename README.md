@@ -78,7 +78,7 @@ cd catppuccin-gtk-theme-mocha
 makepkg -si
 ```
 ### Adding a keyboard layout
-In ```./config/hypr/config/setting.conf``` find ```input``` category and add (or edit):
+In ```./config/hypr/config/settings.conf``` find ```input``` category and add (or edit):
 ```
     kb_layout = us,ru
     kb_options = grp:win_space_toggle
@@ -107,7 +107,7 @@ exec-once = hyprlock
 ```
 ### Obsidian
 >Instead of purchasing a vault, I sync vaults via GitHub.
-1. Configure auto-pull on Arch, hyprland. In ```.config/hypr/config/startup.conf``` add
+1. Configure auto-pull on Arch, hyprland. In ```.config/hypr/config/startup.conf``` add:
 ```
 exec-once = hyprctl dispatch exec "cd ~/Notes && git pull"
 ```
