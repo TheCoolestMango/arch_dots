@@ -12,6 +12,16 @@ My dot files and additional instructions for ricing arch on hyprland
 * Notification center: [swaync](https://github.com/ErikReider/SwayNotificationCenter)
 * Main font: [Departure Mono](https://departuremono.com/)
 * Animated desktop: [awww](https://codeberg.org/LGFae/awww)
+* Notetaker: [obsidian]()
+
+## Additional packages
+* GTK settings: [nwg-look](https://github.com/nwg-piotr/nwg-look)
+* Color picker: [hyprpicker](https://github.com/hyprwm/hyprpicker)
+* Lockscreen: [hyprlock](https://github.com/hyprwm/hyprlock)
+* Screenshots: [hyprshot](https://github.com/Gustash/Hyprshot) (Hotkey configured as SUPER+P in ```/hypr/config/binds.conf```)
+* AUR helper, some packages require it for easier installation: [yay](https://github.com/Jguer/yay)
+* GTK themes: catppuccin-gtk-theme-mocha ([AUR](https://aur.archlinux.org/packages/catppuccin-gtk-theme-mocha))
+* Cursor theme: [catppuccin-cursors-mocha](https://github.com/catppuccin/cursors)
 
 ## Structure
 ```
@@ -42,23 +52,17 @@ My dot files and additional instructions for ricing arch on hyprland
 └── style.css
 ```
 
-## Additional packages
-* GTK settings: [```nwg-look```](https://github.com/nwg-piotr/nwg-look)
-* Color picker: hyprpicker
-* Screenshots: hyprshot (Hotkey configured as SUPER+P in ```/hypr/config/binds.conf```)
-* AUR helper, some packages require it for easier installation: [yay](https://github.com/Jguer/yay)
-* GTK themes: catppuccin-gtk-theme-mocha ([AUR](https://aur.archlinux.org/packages/catppuccin-gtk-theme-mocha))
-* Cursor theme: [catppuccin-cursors-mocha](https://github.com/catppuccin/cursors)
-```
-yay -S catppuccin-cursors-mocha
-```
-
 
 ## Instructions
 ### Pacman
 ```
-sudo pacman -S nwg-look hyprpicker hyprshot
+sudo pacman -S nwg-look hyprpicker hyprshot hyprlock obsidian
 ```
+### yay
+```
+yay -S catppuccin-cursors-mocha
+```
+
 ### Building AUR packages
 Using [catppuccin-gtk-theme-mocha](https://aur.archlinux.org/packages/catppuccin-gtk-theme-mocha) package as an example for building packages from Arch User Repository:
 1. Git clone. The link is copied from *"Git Clone URL:"*
@@ -90,7 +94,7 @@ autologin-session=hyprland
 groupadd -r autologin
 gpasswd -a <username> autologin
 ```
-4. Then ensure that the hyprland startup config includes your lockscreen (e.g. hyprlock). In ```.config/hypr/config/startup.conf``` add:
+4. Ensure that the hyprland startup config includes hyprlock. In ```.config/hypr/config/startup.conf``` add:
 ```
 exec-once = hyprlock
 ```
