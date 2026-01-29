@@ -1,0 +1,134 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "source": "~/Pictures/bunny.txt",
+    "color": {             // Override logo colors
+        "1": "#FAD0FC",
+        "2": "green"
+    }
+  },
+  "display": {
+        "color": {
+        "keys": "#A78EFF",    // Key color
+        "title": "#FA57FD"     // Title color
+    },
+  },
+  "modules": [
+    "title",
+    // "separator",
+    {
+        "type": "custom",
+        "format": "\u001b[35m┌───────────────────Hardware───────────────────┐"
+    },
+    {
+        "type": "host",
+        "key": "  PC",
+        "keyColor": "#E43F6F"
+    },
+    {
+        "type": "cpu",
+        "key": "│ ├",
+        "showPeCoreCount": true,
+        "keyColor": "#E43F6F"
+    },
+    {
+        "type": "gpu",
+        "key": "│ ├󰢮",
+        "keyColor": "#E43F6F"
+    },
+    {
+        "type": "memory",
+        "key": "│ ├",
+        "keyColor": "#E43F6F"
+    },
+    {
+        "type": "disk",
+        "key": "│ └",
+        "keyColor": "#E43F6F",
+	      "format": "{1} / {2} ({3}) - {9}"
+	  },
+    {
+        "type": "custom",
+        "format": "\u001b[35m└──────────────────────────────────────────────┘"
+    },
+    "break",
+    {
+        "type": "custom",
+        "format": "\u001b[35m┌───────────────────Software───────────────────┐"
+    },
+    {
+        "type": "os",
+        "key": "󰣇 OS",
+        "keyColor": "#9E84F1"
+    },
+    {
+        "type": "kernel",
+        "key": "│ ├",
+        "keyColor": "#9E84F1"
+    },
+    {
+	      "type": "terminal",
+        "key": "│ ├",
+        "keyColor": "#9E84F1"
+    },
+	  {
+        "type": "shell",
+        "key": "└ └",
+        "keyColor": "#9E84F1"
+    },
+    // "break",
+    // {
+    //     "type": "de",
+    //     "key": " DE",
+    //     "keyColor": "#219BFF"
+    // },
+    {
+        "type": "wm",
+        "key": " WM",
+        "keyColor": "#219BFF"
+    },
+    // {
+    //     "type": "wmtheme",
+    //     "key": "│ ├󰉼",
+    //     "keyColor": "#219BFF"
+    // },
+    {
+	      "type": "terminalfont",
+	      "key": "│ └",
+	      "keyColor": "#219BFF"
+	  },
+    // {
+	  //     "type": "cursor",
+	  //     "key": "│ ├󰆿",
+	  //     "keyColor": "#219BFF"
+	  // },
+    {
+        "type": "custom",
+        "format": "\u001b[35m└──────────────────────────────────────────────┘"
+    },
+    // "break",
+    // "packages",
+    // "shell",
+    // "display",
+    // "de",
+    // "wm",
+    // "wmtheme",
+    // "theme",
+    // "icons",
+    // "font",
+    // "cursor",
+    // "terminal",
+    // "terminalfont",
+
+    // "localip",
+    // "battery",
+    // "poweradapter",
+    // "locale",
+    "break",
+    {
+        "type": "custom",
+        "format": "\u001b[90m  - \u001b[31m  - \u001b[32m  - \u001b[33m  - \u001b[34m  - \u001b[35m  - \u001b[36m  - \u001b[37m"
+    },
+  ]
+  
+}
