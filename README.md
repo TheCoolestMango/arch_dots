@@ -5,7 +5,7 @@ My dot files and additional instructions for ricing arch on hyprland
 
 ## Main packages
 * Window Manager: [hyprland](https://hypr.land/)
-* File manager: dolphin (subject to change)
+* File manager: [pcmanfm](https://wiki.archlinux.org/title/PCManFM)
 * Panel: [waybar](https://github.com/Alexays/Waybar)
 * Shell: [KiTTY](https://sw.kovidgoyal.net/kitty/)
 * Application launcher: [rofi](https://github.com/davatorium/rofi)
@@ -56,7 +56,7 @@ My dot files and additional instructions for ricing arch on hyprland
 ## Instructions
 ### Pacman
 ```
-sudo pacman -S nwg-look hyprpicker hyprshot hyprlock obsidian
+sudo pacman -S pcmanfm nwg-look hyprpicker hyprshot hyprlock obsidian
 ```
 ### yay
 ```
