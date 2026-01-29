@@ -18,7 +18,7 @@ My dot files and additional instructions for ricing arch on hyprland
 * GTK settings: [nwg-look](https://github.com/nwg-piotr/nwg-look)
 * Color picker: [hyprpicker](https://github.com/hyprwm/hyprpicker)
 * Lockscreen: [hyprlock](https://github.com/hyprwm/hyprlock)
-* Screenshots: [hyprshot](https://github.com/Gustash/Hyprshot) (Hotkey configured as SUPER+P in ```/hypr/config/binds.conf```)
+* Screenshots: [hyprshot](https://github.com/Gustash/Hyprshot) (Hotkey configured as ```SUPER+P``` in ```/hypr/config/binds.conf```)
 * AUR helper, some packages require it for easier installation: [yay](https://github.com/Jguer/yay)
 * GTK themes: catppuccin-gtk-theme-mocha ([AUR](https://aur.archlinux.org/packages/catppuccin-gtk-theme-mocha))
 * Cursor theme: [catppuccin-cursors-mocha](https://github.com/catppuccin/cursors)
@@ -77,6 +77,13 @@ cd catppuccin-gtk-theme-mocha
 ```
 makepkg -si
 ```
+### Adding a keyboard layout
+In ```./config/hypr/config/setting.conf``` find ```input``` category and add (or edit):
+```
+    kb_layout = us,ru
+    kb_options = grp:win_space_toggle
+```
+First line adds russian as a second layout. Toggle hotkey is configured in the second line as ```SUPER + SPACE```
 ### Hyprlock as "login" screen
 1. [Enable autologin](https://wiki.archlinux.org/title/LightDM#Enabling_autologin) in your greeter. Below is the instruction for my LightDM, sourced from ArchWiki:
 ```
